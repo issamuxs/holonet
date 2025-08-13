@@ -1,0 +1,27 @@
+
+2025-07-03 21:26:13,805 - INFO - --- Starting run: resnet-m0-mnist-n0-s42 ---
+2025-07-03 21:26:16,992 - INFO - Attempting to generate model...
+2025-07-03 21:26:17,156 - INFO - Model generated. Depth: 25, Channels: [256, 16, 256, 16]
+2025-07-03 21:26:17,158 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 21:26:17,773 - INFO - Metrics calculated. LCE: 2.076, LPA: 0.117
+2025-07-03 21:26:18,369 - INFO - Starting 20 epochs of training...
+2025-07-03 21:26:52,481 - INFO - Epoch 1/20 completed. Current TBD: 250585.61
+2025-07-03 21:29:08,761 - INFO - Epoch 5/20 completed. Current TBD: 62833.33
+2025-07-03 21:30:20,489 - INFO - --- Starting run: resnet-m0-mnist-n0-s42 ---
+2025-07-03 21:30:23,564 - INFO - Attempting to generate model...
+2025-07-03 21:30:23,963 - INFO - Model generated. Depth: 25, Channels: [512, 32, 512, 32]
+2025-07-03 21:30:23,965 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 21:30:25,157 - INFO - Metrics calculated. LCE: 1.989, LPA: 0.111
+2025-07-03 21:30:26,336 - INFO - Starting 20 epochs of training...
+2025-07-03 21:31:59,342 - ERROR - An unexpected error occurred during run resnet-m0-mnist-n0-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2909/4154686056.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_2909/4154686056.py", line 318, in run_single_experiment
+    prev_slices = [s.clone() for s in current_slices]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_2909/4154686056.py", line 318, in <listcomp>
+    prev_slices = [s.clone() for s in current_slices]
+                   ^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.53 GiB. GPU 0 has a total capacty of 47.53 GiB of which 1.04 GiB is free. Process 1175891 has 46.49 GiB memory in use. Of the allocated memory 41.53 GiB is allocated by PyTorch, and 4.61 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

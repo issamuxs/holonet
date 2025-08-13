@@ -1,0 +1,1 @@
+run_id,arch_name,dataset,noise_level,seed,run_seed,model_index,epochs,lr,num_metric_samples,in_channels,num_classes,input_size,gen_depth,gen_stages,gen_channels_str,lce,lpa,final_acc,asymptotic_tbd_mean,asymptotic_tbd_std,tau,total_tbd

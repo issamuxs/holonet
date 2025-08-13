@@ -1,0 +1,2 @@
+run_id,arch_name,dataset,noise_level,seed,run_seed,model_index,epochs,lr,num_metric_samples,in_channels,num_classes,input_size,gen_depth,gen_stages,gen_channels_str,lce,lpa,final_acc,asymptotic_tbd_mean,asymptotic_tbd_std,tau,total_tbd
+plain_cnn_bn-m0-cifar-n0-s42,plain_cnn_bn,cifar,0.0,42,42,0,10,0.001,500,3,10,32,8,nan,"[32, 32, 32, 32, 32, 64, 32, 64]",2.286946758047377,0.1132782937736498,74.32,2728.416996765137,168.0648145007753,0.8816143655142522,36043.99416351318

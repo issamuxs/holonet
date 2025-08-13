@@ -1,0 +1,16 @@
+2025-07-04 09:42:59,392 - INFO - --- Starting run: plain_cnn_bn-m0-cifar-n50-s42 ---
+2025-07-04 09:43:03,094 - INFO - Attempting to generate model...
+2025-07-04 09:43:03,117 - INFO - Model generated. Depth: 12, Channels: [64, 512, 128, 128, 512, 64, 512, 128, 64, 256, 128, 64]
+2025-07-04 09:43:03,118 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-04 09:43:03,479 - INFO - Metrics calculated. LCE: 2.310, LPA: 0.115
+2025-07-04 09:43:03,523 - INFO - Starting 20 epochs of training...
+2025-07-04 09:43:13,662 - INFO - Epoch 1/20 completed. Current TBD: 12170.45
+2025-07-04 09:43:54,326 - INFO - Epoch 5/20 completed. Current TBD: 867.67
+2025-07-04 09:44:44,385 - INFO - Epoch 10/20 completed. Current TBD: 760.37
+2025-07-04 09:45:34,984 - INFO - Epoch 15/20 completed. Current TBD: 659.81
+2025-07-04 09:46:24,874 - INFO - Epoch 20/20 completed. Current TBD: 683.27
+2025-07-04 09:46:24,874 - INFO - Training complete. Calculating final metrics and outcomes...
+2025-07-04 09:46:26,252 - INFO - Attempting to fit decay constant (tau)...
+2025-07-04 09:46:26,255 - INFO - Decay constant (tau) calculation completed. Tau: 0.30
+2025-07-04 09:46:26,255 - INFO - Run outcomes calculated. Final Accuracy: 47.37, Tau: 0.30
+2025-07-04 09:46:26,255 - INFO - --- Run plain_cnn_bn-m0-cifar-n50-s42 completed. ---

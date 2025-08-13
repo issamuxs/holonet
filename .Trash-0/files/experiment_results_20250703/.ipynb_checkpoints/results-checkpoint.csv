@@ -1,0 +1,2 @@
+lce,lpa,final_acc,asymptotic_tbd_mean,asymptotic_tbd_std,tau,run_id,arch_name,dataset,noise_level,seed,lr,epochs,num_metric_samples,arch_config,in_channels,num_classes,input_size
+2.334948748058659,0.11816238216917334,67.14,1711.9844299316405,141.5809319297488,0.8232744437724139,plain_cnn_bn-cifar-n0-s42-i0,plain_cnn_bn,cifar,0.0,42,0.001,15,1000,"{'generator': 'cnn', 'use_bn': True, 'depth_choices': [4, 8, 16, 32], 'param_ranges': {'channels': [16, 32, 64], 'strides': [1, 2], 'kernels': [3], 'max_downsamples': 3}}",3,10,32

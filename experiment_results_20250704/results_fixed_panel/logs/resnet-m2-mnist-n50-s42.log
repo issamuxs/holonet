@@ -1,0 +1,16 @@
+2025-07-03 22:14:47,757 - INFO - --- Starting run: resnet-m2-mnist-n50-s42 ---
+2025-07-03 22:14:51,325 - INFO - Attempting to generate model...
+2025-07-03 22:14:51,422 - INFO - Model generated. Depth: 8, Channels: [256, 512, 512, 128]
+2025-07-03 22:14:51,423 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:14:51,744 - INFO - Metrics calculated. LCE: 2.366, LPA: 0.117
+2025-07-03 22:14:52,078 - INFO - Starting 20 epochs of training...
+2025-07-03 22:14:57,917 - INFO - Epoch 1/20 completed. Current TBD: 41582.75
+2025-07-03 22:15:21,491 - INFO - Epoch 5/20 completed. Current TBD: 2955.91
+2025-07-03 22:15:50,983 - INFO - Epoch 10/20 completed. Current TBD: 1953.80
+2025-07-03 22:16:20,482 - INFO - Epoch 15/20 completed. Current TBD: 1671.76
+2025-07-03 22:16:50,014 - INFO - Epoch 20/20 completed. Current TBD: 1573.87
+2025-07-03 22:16:50,015 - INFO - Training complete. Calculating final metrics and outcomes...
+2025-07-03 22:16:50,780 - INFO - Attempting to fit decay constant (tau)...
+2025-07-03 22:16:50,784 - INFO - Decay constant (tau) calculation completed. Tau: 0.60
+2025-07-03 22:16:50,784 - INFO - Run outcomes calculated. Final Accuracy: 94.22, Tau: 0.60
+2025-07-03 22:16:50,784 - INFO - --- Run resnet-m2-mnist-n50-s42 completed. ---

@@ -1,0 +1,184 @@
+2025-07-03 22:29:49,353 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-03 22:29:52,913 - INFO - Attempting to generate model...
+2025-07-03 22:29:52,993 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-03 22:29:52,994 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:29:53,696 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-03 22:29:54,075 - INFO - Starting 20 epochs of training...
+2025-07-03 22:30:25,823 - INFO - Epoch 1/20 completed. Current TBD: 164394.60
+2025-07-03 22:32:17,184 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-03 22:32:20,608 - INFO - Attempting to generate model...
+2025-07-03 22:32:20,768 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-03 22:32:20,769 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:32:21,542 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-03 22:32:22,113 - INFO - Starting 20 epochs of training...
+2025-07-03 22:35:25,665 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-03 22:36:35,442 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-03 22:36:39,047 - INFO - Attempting to generate model...
+2025-07-03 22:36:39,134 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-03 22:36:39,136 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:36:39,748 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-03 22:36:40,069 - INFO - Starting 20 epochs of training...
+2025-07-03 22:37:11,474 - INFO - Epoch 1/20 completed. Current TBD: 166082.29
+2025-07-03 22:37:12,454 - ERROR - An unexpected error occurred during run resnet-m3-mnist-n50-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_8687/2330807043.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 305, in run_single_experiment
+    output = model(data.to(device))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 187, in forward
+    out, slices = self.backbone(x, return_all_slices=True) if return_all_slices else (self.backbone(x), None)
+                                                                                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 141, in forward
+    out = block(out)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 117, in forward
+    y = self.act(self.bn1(self.conv1(x))); y = self.bn2(self.conv2(y)); y += self.shortcut(x); return self.act(y)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 2478, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 784.00 MiB. GPU 0 has a total capacty of 47.53 GiB of which 536.88 MiB is free. Process 1279048 has 47.00 GiB memory in use. Of the allocated memory 45.45 GiB is allocated by PyTorch, and 1.20 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+2025-07-04 07:20:43,789 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-04 07:20:47,143 - INFO - Attempting to generate model...
+2025-07-04 07:20:47,228 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-04 07:20:47,229 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-04 07:20:47,947 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-04 07:20:48,617 - INFO - Starting 20 epochs of training...
+2025-07-04 07:20:49,335 - ERROR - An unexpected error occurred during run resnet-m3-mnist-n50-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_46/2330807043.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2330807043.py", line 305, in run_single_experiment
+    output = model(data.to(device))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2330807043.py", line 187, in forward
+    out, slices = self.backbone(x, return_all_slices=True) if return_all_slices else (self.backbone(x), None)
+                                                                                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2330807043.py", line 141, in forward
+    out = block(out)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2330807043.py", line 117, in forward
+    y = self.act(self.bn1(self.conv1(x))); y = self.bn2(self.conv2(y)); y += self.shortcut(x); return self.act(y)
+                                                                                                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 1471, in relu
+    result = torch.relu(input)
+             ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 784.00 MiB. GPU 0 has a total capacty of 23.67 GiB of which 226.25 MiB is free. Process 2199227 has 23.45 GiB memory in use. Of the allocated memory 22.12 GiB is allocated by PyTorch, and 1.07 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+2025-07-04 07:24:39,870 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-04 07:24:43,379 - INFO - Attempting to generate model...
+2025-07-04 07:24:43,450 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-04 07:24:43,451 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-04 07:24:44,199 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-04 07:24:44,515 - INFO - Starting 20 epochs of training...
+2025-07-04 07:24:45,526 - ERROR - An unexpected error occurred during run resnet-m3-mnist-n50-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_46/2016509918.py", line 584, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2016509918.py", line 306, in run_single_experiment
+    output = model(data.to(device))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2016509918.py", line 188, in forward
+    out, slices = self.backbone(x, return_all_slices=True) if return_all_slices else (self.backbone(x), None)
+                                                                                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2016509918.py", line 142, in forward
+    out = block(out)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_46/2016509918.py", line 118, in forward
+    y = self.act(self.bn1(self.conv1(x))); y = self.bn2(self.conv2(y)); y += self.shortcut(x); return self.act(y)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 2478, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 784.00 MiB. GPU 0 has a total capacty of 23.67 GiB of which 78.25 MiB is free. Process 2199227 has 23.59 GiB memory in use. Of the allocated memory 21.08 GiB is allocated by PyTorch, and 2.22 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+2025-07-04 07:25:58,535 - INFO - --- Starting run: resnet-m3-mnist-n50-s42 ---
+2025-07-04 07:26:01,862 - INFO - Attempting to generate model...
+2025-07-04 07:26:02,042 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-04 07:26:02,043 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-04 07:26:02,785 - INFO - Metrics calculated. LCE: 2.251, LPA: 0.124
+2025-07-04 07:26:02,999 - INFO - Starting 20 epochs of training...
+2025-07-04 07:26:43,573 - INFO - Epoch 1/20 completed. Current TBD: 128857.14
+2025-07-04 07:29:24,748 - INFO - Epoch 5/20 completed. Current TBD: 27340.76
+2025-07-04 07:32:45,668 - INFO - Epoch 10/20 completed. Current TBD: 17184.30
+2025-07-04 07:36:06,611 - INFO - Epoch 15/20 completed. Current TBD: 12336.18
+2025-07-04 07:39:26,889 - INFO - Epoch 20/20 completed. Current TBD: 10776.54
+2025-07-04 07:39:26,891 - INFO - Training complete. Calculating final metrics and outcomes...
+2025-07-04 07:39:30,818 - INFO - Attempting to fit decay constant (tau)...
+2025-07-04 07:39:30,822 - INFO - Decay constant (tau) calculation completed. Tau: 0.93
+2025-07-04 07:39:30,823 - INFO - Run outcomes calculated. Final Accuracy: 92.36, Tau: 0.93
+2025-07-04 07:39:30,823 - INFO - --- Run resnet-m3-mnist-n50-s42 completed. ---

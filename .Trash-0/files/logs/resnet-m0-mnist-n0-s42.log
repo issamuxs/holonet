@@ -1,0 +1,10 @@
+2025-07-03 21:35:40,106 - INFO - --- Starting run: resnet-m0-mnist-n0-s42 ---
+2025-07-03 21:35:43,273 - INFO - Attempting to generate model...
+2025-07-03 21:35:43,451 - INFO - Model generated. Depth: 25, Channels: [128, 64, 512, 256]
+2025-07-03 21:35:43,453 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 21:35:43,956 - INFO - Metrics calculated. LCE: 1.863, LPA: 0.120
+2025-07-03 21:35:44,295 - INFO - Starting 20 epochs of training...
+2025-07-03 21:35:52,290 - INFO - Epoch 1/20 completed. Current TBD: 152061.80
+2025-07-03 21:36:23,286 - INFO - Epoch 5/20 completed. Current TBD: 61272.55
+2025-07-03 21:37:02,308 - INFO - Epoch 10/20 completed. Current TBD: 22901.90
+2025-07-03 21:37:41,510 - INFO - Epoch 15/20 completed. Current TBD: 18926.47

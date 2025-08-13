@@ -1,0 +1,16 @@
+2025-07-04 17:59:18,756 - INFO - --- Starting run: resnet-m9-cifar-n100-s42 ---
+2025-07-04 17:59:22,783 - INFO - Attempting to generate model...
+2025-07-04 17:59:22,896 - INFO - Model generated. Depth: 16, Channels: [512, 512, 64, 512]
+2025-07-04 17:59:22,898 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-04 17:59:23,766 - INFO - Metrics calculated. LCE: 2.562, LPA: 0.112
+2025-07-04 17:59:23,813 - INFO - Starting 20 epochs of training...
+2025-07-04 17:59:53,029 - INFO - Epoch 1/20 completed. Current TBD: 148859.66
+2025-07-04 18:01:50,064 - INFO - Epoch 5/20 completed. Current TBD: 27825.18
+2025-07-04 18:04:16,821 - INFO - Epoch 10/20 completed. Current TBD: 16512.57
+2025-07-04 18:06:43,377 - INFO - Epoch 15/20 completed. Current TBD: 13449.10
+2025-07-04 18:09:09,000 - INFO - Epoch 20/20 completed. Current TBD: 13108.08
+2025-07-04 18:09:09,003 - INFO - Training complete. Calculating final metrics and outcomes...
+2025-07-04 18:09:12,525 - INFO - Attempting to fit decay constant (tau)...
+2025-07-04 18:09:12,529 - INFO - Decay constant (tau) calculation completed. Tau: 0.66
+2025-07-04 18:09:12,529 - INFO - Run outcomes calculated. Final Accuracy: 5.77, Tau: 0.66
+2025-07-04 18:09:12,529 - INFO - --- Run resnet-m9-cifar-n100-s42 completed. ---

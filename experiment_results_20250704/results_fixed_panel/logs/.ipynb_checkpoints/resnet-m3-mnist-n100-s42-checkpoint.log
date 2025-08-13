@@ -1,0 +1,55 @@
+2025-07-03 22:37:12,522 - INFO - --- Starting run: resnet-m3-mnist-n100-s42 ---
+2025-07-03 22:37:16,326 - INFO - Attempting to generate model...
+2025-07-03 22:37:16,402 - INFO - Model generated. Depth: 16, Channels: [512, 128, 256, 256]
+2025-07-03 22:37:16,403 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:37:17,021 - INFO - Metrics calculated. LCE: 2.558, LPA: 0.123
+2025-07-03 22:37:17,369 - INFO - Starting 20 epochs of training...
+2025-07-03 22:38:01,318 - INFO - Epoch 1/20 completed. Current TBD: 165343.43
+2025-07-03 22:38:01,997 - ERROR - An unexpected error occurred during run resnet-m3-mnist-n100-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_8687/2330807043.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 305, in run_single_experiment
+    output = model(data.to(device))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 187, in forward
+    out, slices = self.backbone(x, return_all_slices=True) if return_all_slices else (self.backbone(x), None)
+                                                                                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 141, in forward
+    out = block(out)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 117, in forward
+    y = self.act(self.bn1(self.conv1(x))); y = self.bn2(self.conv2(y)); y += self.shortcut(x); return self.act(y)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 2478, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 784.00 MiB. GPU 0 has a total capacty of 47.53 GiB of which 636.88 MiB is free. Process 1279048 has 46.90 GiB memory in use. Of the allocated memory 45.45 GiB is allocated by PyTorch, and 1.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

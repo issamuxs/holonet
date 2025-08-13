@@ -1,0 +1,46 @@
+2025-07-03 22:40:10,824 - INFO - --- Starting run: resnet-m4-mnist-n100-s42 ---
+2025-07-03 22:40:14,734 - INFO - Attempting to generate model...
+2025-07-03 22:40:15,318 - INFO - Model generated. Depth: 49, Channels: [512, 512, 64, 256]
+2025-07-03 22:40:15,322 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 22:40:16,188 - INFO - Metrics calculated. LCE: 2.535, LPA: 0.127
+2025-07-03 22:40:16,555 - INFO - Starting 20 epochs of training...
+2025-07-03 22:41:23,910 - INFO - Epoch 1/20 completed. Current TBD: 473691.57
+2025-07-03 22:41:24,631 - ERROR - An unexpected error occurred during run resnet-m4-mnist-n100-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_8687/2330807043.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 305, in run_single_experiment
+    output = model(data.to(device))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 187, in forward
+    out, slices = self.backbone(x, return_all_slices=True) if return_all_slices else (self.backbone(x), None)
+                                                                                      ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 141, in forward
+    out = block(out)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8687/2330807043.py", line 117, in forward
+    y = self.act(self.bn1(self.conv1(x))); y = self.bn2(self.conv2(y)); y += self.shortcut(x); return self.act(y)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 1471, in relu
+    result = torch.relu(input)
+             ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU 0 has a total capacty of 47.53 GiB of which 38.88 MiB is free. Process 1279048 has 47.48 GiB memory in use. Of the allocated memory 46.87 GiB is allocated by PyTorch, and 273.70 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

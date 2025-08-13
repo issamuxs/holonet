@@ -1,0 +1,18 @@
+2025-07-03 21:31:59,452 - INFO - --- Starting run: resnet-m0-mnist-n50-s42 ---
+2025-07-03 21:32:02,970 - INFO - Attempting to generate model...
+2025-07-03 21:32:03,249 - INFO - Model generated. Depth: 25, Channels: [512, 32, 512, 32]
+2025-07-03 21:32:03,251 - INFO - Calculating initial geometric metrics (LCE, LPA)...
+2025-07-03 21:32:04,331 - INFO - Metrics calculated. LCE: 2.425, LPA: 0.114
+2025-07-03 21:32:04,645 - INFO - Starting 20 epochs of training...
+2025-07-03 21:33:38,687 - ERROR - An unexpected error occurred during run resnet-m0-mnist-n50-s42.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_2909/4154686056.py", line 583, in <module>
+    results, model_to_delete, optimizer_to_delete = run_single_experiment(config, datasets_cache, run_logger) # Pass logger
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_2909/4154686056.py", line 318, in run_single_experiment
+    prev_slices = [s.clone() for s in current_slices]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_2909/4154686056.py", line 318, in <listcomp>
+    prev_slices = [s.clone() for s in current_slices]
+                   ^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.53 GiB. GPU 0 has a total capacty of 47.53 GiB of which 494.88 MiB is free. Process 1175891 has 47.04 GiB memory in use. Of the allocated memory 40.00 GiB is allocated by PyTorch, and 6.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
